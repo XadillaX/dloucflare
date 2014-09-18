@@ -1,0 +1,35 @@
+{
+  "name": "dlouc-flare",
+  "version": "0.1.0",
+  "description": "To run at a server which has a dynamic IP and cloudflare service. It can dynamic modify your DNS record by your realtime IP address.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "scarlet-task": "~0.1.0",
+    "spidex": "~1.0.7",
+    "sugar": "~1.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/XadillaX/dloucflare.git"
+  },
+  "keywords": [
+    "dynamic",
+    "cloudflare",
+    "domain",
+    "DDNS",
+    "dynamic domain"
+  ],
+  "author": "XadillaX",
+  "license": "GPLv2",
+  "bugs": {
+    "url": "https://github.com/XadillaX/dloucflare/issues"
+  },
+  "homepage": "https://github.com/XadillaX/dloucflare"
+}
