@@ -7,11 +7,14 @@
     "test": "test"
   },
   "dependencies": {
-    "scarlet-task": "~0.1.0",
-    "spidex": "~1.0.7",
+    "scarlet-task": "^0.1.0-comment",
+    "spidex": "^2.0.5",
     "sugar": "~1.4.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "mocha": "^2.3.2",
+    "should": "^7.1.0"
+  },
   "scripts": {
     "test": "node test/test.js"
   },

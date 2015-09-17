@@ -9,3 +9,5 @@ exports.create = function(email, apiKey, domain) {
     var dloucflare = new DloucFlare(email, apiKey, domain);
     return new DDNS(dloucflare);
 };
+
+exports.IPGETTER = require("./lib/ipgetters");
