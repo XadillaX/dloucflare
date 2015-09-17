@@ -22,19 +22,60 @@ After you set up your own domain settings on **CloudFlare**, you can use **Dlouc
 
 Go to your own **NODE.JS** project directory and get this package from `npm`:
 
-    $ cd /your/path
-    $ npm install dlouc-flare
+```sh
+$ cd /your/path
+$ npm install dlouc-flare
+```
 
 And then create your `app.js`. The code is very simple:
 
-    var dloucflare = require("dlouc-flare");
-    var df = dloucflare.create("your@register.email", "API KEY", "doma.in");
-    df.dynamicDomains([ "sub1", "sub2", "..." ], CHECK_ROUND_TIME);
+```javascript
+var dloucflare = require("dlouc-flare");
+var df = dloucflare.create("your@register.email", "API KEY", "doma.in");
+df.dynamicDomains([ "sub1", "sub2", "..." ], CHECK_ROUND_TIME);
+```
 
 Just start up this `app.js`. If you want it run at the backend, you can use `nohup` command:
 
-    $ nohup node app.js > foo.log 2>&1 &
-    
+```sh
+$ nohup node app.js > foo.log 2>&1 &
+```
+
+### CUSTOM IP GETTER
+
+You can use your own custom IP getter function. Just set it:
+
+```javascript
+df.setIpGetter(function(callback) {
+    callback(undefined, "127.0.0.1");
+});
+```
+
+> You should return IP in the second parameter of callback.
+>
+> And you should query IP address by your own logic.
+
+We also prepared some default IP Getter function for you. You may use it like:
+
+```javascript
+var IPGETTER = dloucflare.IPGETTER;
+df.setIpGetter(IPGETTER.TELIZE);
+df.setIpGetter(IPGETTER.ALIYUN);
+df.setIpGetter(IPGETTER.QQ);
+```
+
+We list the prepared getter below:
+
+* TELIZE
+* ALIYUN
+* SOHU
+* IP138
+* QQ
+* IP5
+* WIN7SKY
+* SZBENDIBAO
+* WHATISMYIP
+
 ## CONTACT
 
 If you want contribute to this project, you can fork it!
@@ -52,4 +93,4 @@ The v0.0.2 version is [here](https://github.com/XadillaX/dloucflare/tree/0.0.2).
 
 ## CONTRIBUTION
 
-You're welcome to pull request!
+You're welcome to make pull request!
