@@ -9,7 +9,7 @@ var spidex = require("spidex");
 var IPGETTER = require("../").IPGETTER;
 
 describe("# ip getters", function() {
-    this.timeout(60000);
+    this.timeout(600000);
     var stdIp;
 
     before(function(done) {
