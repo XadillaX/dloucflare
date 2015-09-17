@@ -18,7 +18,7 @@
     "should": "^7.1.0"
   },
   "scripts": {
-    "test": "node test/test.js"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
