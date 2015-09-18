@@ -9,13 +9,13 @@ var spidex = require("spidex");
 var IPGETTER = require("../").IPGETTER;
 
 describe("# ip getters", function() {
-    this.timeout(600000);
+    this.timeout(0);
     var stdIp;
 
     before(function(done) {
         spidex.get("http://www.telize.com/ip", {
             charset: "utf8",
-            timeout: 30000
+            timeout: 120000
         }, function(html) {
             stdIp = html;
             while(stdIp[stdIp.length - 1] === "\n") {
