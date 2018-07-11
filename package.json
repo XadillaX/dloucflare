@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "scarlet-task": "^0.1.0-comment",
-    "spidex": "^2.0.5",
+    "spidex": "^2.2.1",
     "sugar": "^1.4.1"
   },
   "devDependencies": {

@@ -31,7 +31,7 @@ And then create your `app.js`. The code is very simple:
 
 ```javascript
 var dloucflare = require("dlouc-flare");
-var df = dloucflare.create("your@register.email", "API KEY", "doma.in");
+var df = dloucflare.create("your@register.email", "API KEY", "doma.in", "ZONE ID");
 df.dynamicDomains([ "sub1", "sub2", "..." ], CHECK_ROUND_TIME);
 ```
 

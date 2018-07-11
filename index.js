@@ -5,8 +5,8 @@ require("sugar");
 var DloucFlare = require("./lib/dloucflare");
 var DDNS = require("./lib/ddns");
 
-exports.create = function(email, apiKey, domain) {
-    var dloucflare = new DloucFlare(email, apiKey, domain);
+exports.create = function(email, apiKey, domain, zoneId) {
+    var dloucflare = new DloucFlare(email, apiKey, domain, zoneId);
     return new DDNS(dloucflare);
 };
 
