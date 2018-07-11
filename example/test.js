@@ -3,7 +3,7 @@
  */
 var DloucFlare = require("../");
 
-var df = DloucFlare.create("YOUR_EMAIL", "YOUR_TOKEN", "kacaka.ca");
+var df = DloucFlare.create("YOUR_EMAIL", "YOUR_TOKEN", "kacaka.ca", "ZONE_ID");
 df.dynamicDomains([ "@", "www" ], 1000 * 30, function(err, interval) {
     if(err) {
         return console.log(err);
