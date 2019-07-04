@@ -9,7 +9,8 @@
   "dependencies": {
     "scarlet-task": "^0.1.0-comment",
     "spidex": "^2.2.1",
-    "sugar": "^1.4.1"
+    "sugar": "^1.4.1",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "coveralls": "^2.11.4",
@@ -18,7 +19,9 @@
     "should": "^7.1.0"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -36,5 +39,6 @@
   "bugs": {
     "url": "https://github.com/XadillaX/dloucflare/issues"
   },
-  "homepage": "https://github.com/XadillaX/dloucflare"
+  "homepage": "https://github.com/XadillaX/dloucflare",
+  "snyk": true
 }
